@@ -1,11 +1,10 @@
 import requests
-
 from decouple import config
 
 
-def get_tickets(url, perpage=25):
+def get_tickets(url, perpage=25, auth=(config('EMAIL'), config('PASSWORD'))):
     req = requests.get(
-        url, auth=(config('EMAIL'), config('PASSWORD')))
+        url, auth=auth)
     if req.status_code == 403:
         return False, "authentication error"
     elif req.status_code == 404:
@@ -13,4 +12,4 @@ def get_tickets(url, perpage=25):
     elif req.status_code == 200:
         return True, req.json()
     else:
-        return False, "unknown error"
+        return False, "an error occur during accessing the api"

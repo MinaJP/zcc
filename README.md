@@ -1,7 +1,8 @@
 # Zendesk Ticket Viewer CLI
 
 
-### Set Up the Virtual environment and environment variables
+### Set Up 
+Set up the Virtual environment
 
 ```
    python3 -m venv venv
@@ -28,4 +29,19 @@ DOMAIN=yourdomainname
 EMAIL=youremail@..
 PASSWORD=yourp@ssw0rd
 ```
+### Use
+Activate the command line by running
+```
+python3 main.py
+```
+and follow the instructions.
+
+Basic commands:
+*help -view list of commands and description
+*list - shows maximum of 25 tickets available on the current page. It is defualt to first page when it is first call
+*ticket {id} - shows detail page of ticket with the id:{id}
+*prev_page - will display previous page if available
+*next_page - will display next page if available
+
+
 

@@ -1,7 +1,7 @@
 # Zendesk Ticket Viewer CLI
 
 
-Set Up the Virtual environment and .env
+### Set Up the Virtual environment and environment variables
 
 ```
    python3 -m venv venv
@@ -24,8 +24,8 @@ Install the Requirements
 Add .env file to the directory
 .env file should contains:
 ```
-DOMAIN=domainname
-EMAIL=email@..
-PASSWORD=p@ssw0rd
+DOMAIN=yourdomainname
+EMAIL=youremail@..
+PASSWORD=yourp@ssw0rd
 ```
 
